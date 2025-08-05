@@ -30,10 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
         if (window.scrollY > 10) {
             navbar.classList.add("bg-white")
-            navbar.classList.remove("bg-green-50")
         } else {
             navbar.classList.remove("bg-white")
-            navbar.classList.add("bg-green-50")
         }
     });
 
