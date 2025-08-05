@@ -39,6 +39,6 @@ input:user-invalid {
 
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.667)),
-        url(https://images.pexels.com/photos/1350461/pexels-photo-1350461.jpeg?_gl=1*1nquzrj*_ga*MTU1MTYyMjc1NC4xNzUyMDQ1MzM5*_ga_8JE65Q40S6*czE3NTQzODEyOTYkbzIwJGcxJHQxNzU0MzgxMzM2JGoyMCRsMCRoMA..) no-repeat center center;
+        url(/docs/assets/images/img.jpeg) no-repeat center center;
     background-size: cover;
 }
