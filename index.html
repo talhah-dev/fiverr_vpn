@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunnel Fun</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/docs/assets/images/logo.png" type="image/x-icon">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/docs/Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- seo -->
+
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div id="global-loader"
+        class="hidden transition-opacity duration-300 opacity-0 fixed inset-0 bg-zinc-100 flex justify-center items-center z-50">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#00746e]"></div>
+    </div>
+
+    <div id="bottomToTopScroll"></div>
+
+    <!-- navbar -->
+
+    <nav id="navbar" class="fixed transition-all duration-500 bg-green-50 top-0 left-0 w-full z-40">
+        <div class="md:max-w-[85%] mx-auto flex justify-between items-center w-full lg:p-5 p-3 lg:h-[116px] h-24">
+            <div class="flex w-full items-center justify-between xl:gap-32 gap-20">
+                <a data-aos="fade-right" href="/index.html" class="flex items-center justify-center lg:justify-start">
+                    <img src="/docs/assets/images/logo.png" class="lg:h-24 h-20" alt="logo">
+                </a>
+                <div class="flex items-center gap-5">
+                    <div data-aos="fade-left" class="lg:flex items-center gap-10 hidden">
+                        <ul id="navbarLinks" class="lg:flex text-lg hidden items-center text-[#1D2939] gap-10">
+                            <li><a href="#about"
+                                    class="hover:opacity-60 tracking-wide  transition-all duration-500">About Us</a>
+                            </li>
+                            <li><a href="#contact"
+                                    class="hover:opacity-60 tracking-wide transition-all duration-500">Contact Us</a>
+                            </li>
+                        </ul>
+                        <span class="text-green-600">|</span>
+                        <div class="">
+                            <a href="#"
+                                class="w-full md:w-auto tracking-wider inline-flex items-center justify-center py-3 px-7 text-base font-medium text-center text-white rounded-full bg-[#00746e] shadow-xs hover:opacity-70 transition-all duration-500">
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <i data-aos="fade-left" id="mobileMenuBtn"
+                    class="fa-solid text-zinc-800 fa-bars lg:!hidden text-2xl cursor-pointer mr-2"></i>
+            </div>
+    </nav>
+
+    <div id="mobileMenu"
+        class="fixed left-0 top-0 bg-white w-0 overflow-hidden h-screen z-50 transition-all duration-500">
+        <div class="flex items-end justify-end p-5">
+            <i class="fa-solid mobileMenuCloseBtn fa-x z-50 text-zinc-800 text-xl cursor-pointer"></i>
+        </div>
+        <div class="p-6">
+            <ul class="flex relative z-50 text-[#1D2939] flex-col gap-7">
+                <li><a href="#about"
+                        class="hover:opacity-60 mobileMenuCloseBtn tracking-wide  transition-all duration-500 text-nowrap">About Us</a>
+                </li>
+                <li><a href="#contact"
+                        class="hover:opacity-60 mobileMenuCloseBtn tracking-wide transition-all duration-500 text-nowrap">Contact Us</a>
+                </li>
+            </ul>
+            <div class="mt-5">
+                <a href="#"
+                    class="w-full tracking-wider inline-flex items-center justify-center py-3 px-7 text-base font-medium text-center text-white rounded-full bg-[#00746e] shadow-xs hover:opacity-70 transition-all duration-500">
+                    Download
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="lg:h-24 h-20"></div>
+
+    <section
+        class="homeBanner bg-green-50 relative overflow-hidden md:min-h-[calc(100vh-6rem)] min-h-[calc(100vh-5rem)] bg-center bg-cover py-10">
+        <!-- Content -->
+        <div
+            class="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 md:min-h-[calc(100vh-6rem)] min-h-[calc(100vh-5rem)] flex md:flex-row md:gap-20 gap-5 items-center justify-center flex-col">
+            <div class="md:w-[60%] w-full">
+                <p data-aos="fade-up" data-aos-delay="100"
+                    class="flex items-center gap-2 text-lg font-medium text-zinc-600 md:mb-5 mb-3">
+                    <i class="fa-solid fa-circle-check text-[#00746e]"></i>
+                    Named no. 1 VPN in 2025
+                </p>
+                <h1 data-aos="fade-up" data-aos-delay="200"
+                    class="max-w-5xl textShadow mx-auto font-semibold text-4xl md:text-5xl text-zinc-800 leading-tight md:mb-6 mb-4">
+                    The best VPN service for online security.
+                    <br> Get started risk free.
+                </h1>
+                <ul data-aos="fade-up" data-aos-delay="400" class="text-zinc-600 md:mb-7 mb-5 text-lg space-y-3">
+                    <li class="flex items-center gap-2"> <i class="fa-solid fa-check text-[#00746e]"></i> One of the
+                        fastest VPNs in the world.</li>
+                    <li class="flex items-center gap-2"> <i class="fa-solid fa-check text-[#00746e]"></i> Secures up to
+                        10 devices with a single account.</li>
+                    <li class="flex items-center gap-2"> <i class="fa-solid fa-check text-[#00746e]"></i> Helps you
+                        avoid phishing, scams, and malware.</li>
+                </ul>
+                <div data-aos="fade-up" data-aos-delay="600">
+                    <a href="#"
+                        class="w-full md:w-auto tracking-wider inline-flex items-center justify-center py-3.5 md:py-4 px-7 md:px-16 text-base font-medium text-center text-white rounded-full bg-[#00746e] shadow-xs hover:opacity-70 transition-all duration-500">
+                        Get Started
+                    </a>
+                </div>
+                <p data-aos="fade-up" data-aos-delay="700" class="mt-4 text-zinc-600 text-xs flex items-center gap-1">
+                    <i class="fa-regular fa-clock"></i> 30-day money-back guarantee
+                </p>
+            </div>
+            <div class="md:w-[40%] w-full">
+                <img src="/docs/assets/images/mobile.png" class="w-full max-w-[80%] mx-auto" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="about"
+        class="md:max-w-7xl flex items-center justify-center md:flex-row flex-col md:gap-20 gap-6 lg:px-12 p-4 w-full mx-auto lg:mt-24 mt-12">
+        <div data-aos="zoom-in" class="md:w-[50%] w-full">
+            <img src="https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?_gl=1*68p148*_ga*MTU1MTYyMjc1NC4xNzUyMDQ1MzM5*_ga_8JE65Q40S6*czE3NTQzNTg2OTMkbzE5JGcxJHQxNzU0MzU5NzIyJGo3JGwwJGgw"
+                class="w-full rounded-xl" alt="">
+        </div>
+        <div class="md:w-[50%] w-full">
+            <p data-aos="fade-up" class="mb-3 px-2 bg-green-100 rounded-full py-1 inline-block text-xs">About Us</p>
+            <h2 data-aos="fade-up"
+                class="lg:text-5xl capitalize md:leading-[3.8rem] text-3xl font-semibold text-zinc-800">
+                Who we are
+            </h2>
+            <p data-aos="fade-up" class="mt-5 text-zinc-600 md:text-lg">
+                We are not re-sellers, All our solutions are 100% exclusive to DigibitUK & Our clients, Our networks &
+                servers are 100% owned & managed by our team exclusively, All our servers are rack mounted worldwide &
+                we guarantee 99% up-time on any of our services. Privacy done right.
+
+            </p>
+        </div>
+    </section>
+
+    <section class="md:max-w-7xl lg:px-12 p-4 w-full mx-auto lg:mt-24 mt-12">
+        <h2 class="lg:text-5xl max-w-3xl mx-auto capitalize lg:leading-[3.5rem] text-center text-3xl font-semibold text-zinc-700"
+            data-aos="fade-up">Access a safer and better internet with our VPN service
+        </h2>
+        <p class="text-center text-zinc-600 mt-5 md:text-lg" data-aos="fade-up">Go online with a VPN service you can
+            trust — use NordVPN to take your browsing to the next level.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10 md:mt-16 mt-8">
+            <div data-aos="fade-up"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="mb-4">
+                    <i class="fa-solid text-5xl text-[#00746e] fa-globe-americas"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 capitalize transition-all duration-500">Global
+                    coverage</h4>
+                <p class="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 mb-4">
+                    NordVPN offers a massive network of servers across 126 locations. Over 8,100 VPN servers allow you
+                    to find one nearby, no matter where you are. Not a fan of changing IP addresses but want the
+                    security? Get a dedicated IP and be the only one to use it!
+                </p>
+            </div>
+
+            <div data-aos="fade-up"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="mb-4">
+                    <i class="fa-solid text-5xl text-[#00746e] fa-tachometer-alt"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 capitalize transition-all duration-500">The fastest
+                    VPN service¹</h4>
+                <p class="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 mb-4">
+                    NordVPN is the fastest VPN provider on the market thanks to our vast server network, ultralight
+                    applications, revolutionary NordLynx protocol, and unlimited VPN bandwidth. These features combined
+                    allow NordVPN to deliver amazing connection speeds to our users. Our apps offer download speeds of
+                    up to 2964 Mb/s in the US, 2760 Mb/s in the UK, and 2820 Mb/s in Japan.
+                </p>
+            </div>
+
+            <div data-aos="fade-up"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="mb-4">
+                    <i class="fa-solid text-5xl text-[#00746e] fa-shield-virus"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 capitalize transition-all duration-500">A VPN with
+                    integrated anti-malware tool</h4>
+                <p class="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 mb-4">
+                    Block phishing, malicious downloads, dangerous websites, and ads with Threat Protection Pro™ — our
+                    anti-malware tool. It’s integrated directly into the NordVPN apps for Mac and Windows. Threat
+                    Protection Pro™ blocks millions of scam and phishing websites and malware attempts every month and
+                    prevents billions of intrusive ads from loading.
+                </p>
+            </div>
+
+            <div data-aos="fade-up"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="mb-4">
+                    <i class="fa-solid text-5xl text-[#00746e] fa-mask"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 capitalize transition-all duration-500">A VPN with
+                    Dark Web Monitor</h4>
+                <p class="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 mb-4">
+                    Our VPN app comes with Dark Web Monitor — a service that continuously scans the dark web and
+                    instantly alerts you about leaked credentials. It allows you to act fast and protect your accounts
+                    before criminals can do any harm.
+                </p>
+            </div>
+
+            <div data-aos="fade-up"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="mb-4">
+                    <i class="fa-solid text-5xl text-[#00746e] fa-user-shield"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 capitalize transition-all duration-500">Protection
+                    from online tracking</h4>
+                <p class="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 mb-4">
+                    We don’t log your online activity, so what you do online is only your business. Need more privacy
+                    than a regular VPN can give? Enable Threat Protection Pro™, and it will even block third-party
+                    trackers from following you around the internet.
+                </p>
+            </div>
+
+            <div data-aos="fade-up"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="mb-4">
+                    <i class="fa-solid text-5xl text-[#00746e] fa-lock"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-2 capitalize transition-all duration-500">Secure
+                    encryption for your internet traffic</h4>
+                <p class="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 mb-4">
+                    NordVPN uses the AES-256 encryption protocol to encrypt your internet traffic before sending it
+                    through a secure VPN tunnel. The encryption scrambles your online data so much that no snoopers can
+                    view or use it — brute-forcing the cipher is virtually impossible.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="banner md:py-20 md:mt-20 mt-10 py-10">
+        <div class="max-w-6xl w-full mx-auto p-5 lg:px-12 text-center flex items-center justify-center flex-col">
+            <h2 class="md:text-5xl text-3xl md:mb-6 mb-6 md:leading-[4rem] capitalize font-semibold">A one-stop shop for
+                safe
+                browsing, passwords, and files</h2>
+            <p class="md:text-lg max-w-3xl mx-auto">Pick the best plan for your needs and rest easy knowing all aspects
+                of your digital life are protected at all times.</p>
+            <div class="md:mt-6 mt-4">
+                <a href="#"
+                    class="w-full md:w-auto tracking-wider inline-flex items-center justify-center py-3.5 md:py-4 px-7 md:px-16 text-base font-medium text-center text-white rounded-full bg-[#00746e] shadow-xs hover:opacity-70 transition-all duration-500">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="md:max-w-7xl flex items-center justify-center md:flex-row flex-col md:gap-20 gap-6 lg:px-12 p-4 w-full mx-auto lg:mt-24 mt-12">
+        <div class="md:w-[50%] w-full">
+            <p data-aos="fade-up" class="mb-3 px-2 bg-green-100 rounded-full py-1 inline-block text-xs">Benefit</p>
+            <h2 data-aos="fade-up"
+                class="lg:text-5xl capitalize md:leading-[3.8rem] text-3xl font-semibold text-zinc-800">
+                Why you should use a VPN
+            </h2>
+            <p data-aos="fade-up" class="mt-5 text-zinc-600 md:text-lg">
+
+                A VPN makes you safer on public Wi-Fi, helps you securely access your content while you travel, and
+                helps boost your privacy online. Plus, with our 30-day money-back guarantee and affordable monthly,
+                annual, and biennial plans, it’s easy to try it out and see the difference for yourself — no commitment
+                needed.
+            </p>
+        </div>
+        <div data-aos="zoom-in" class="md:w-[50%] w-full">
+            <img src="https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?_gl=1*68p148*_ga*MTU1MTYyMjc1NC4xNzUyMDQ1MzM5*_ga_8JE65Q40S6*czE3NTQzNTg2OTMkbzE5JGcxJHQxNzU0MzU5NzIyJGo3JGwwJGgw"
+                class="w-full rounded-xl" alt="">
+        </div>
+    </section>
+
+    <section id="contact" class="md:max-w-[80%] md:mb-20 mb-10 p-4 w-full mx-auto lg:mt-24 mt-12">
+        <div class="flex md:gap-20 gap-8 flex-col lg:flex-row">
+            <div class="lg:max-w-[45%] w-full">
+
+                <h2 data-aos="fade-up" class="lg:text-[40px] text-3xl lg:max-w-sm font-semibold text-zinc-700">
+                    Contact Us</h2>
+                <p data-aos="fade-up" class="text-[#1D2939] text-lg mt-2">
+                    Lorem ipsum dolor sit amet.
+                </p>
+
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-2 md:mt-5 mt-8">
+                    <div class="md:col-span-2" data-aos="fade-up">
+                        <a class="w-full flex md:items-center transition-all duration-500 hover:opacity-70 gap-3 md:p-4 p-3 bg-zinc-100 rounded-2xl "
+                            href="mailto:abc@gmail.com">
+                            <div class="">
+                                <h3 class="Montserrat font-semibold text-lg text-[#101828]">Email</h3>
+                                <p class="text-zinc-600 font-semibold">abc@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="md:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                        <a class="w-full flex md:items-center transition-all duration-500 hover:opacity-70 gap-3 md:p-4 p-3 bg-zinc-100 rounded-2xl "
+                            href="tel+:00000000000000">
+                            <div class="">
+                                <h3 class="Montserrat font-semibold text-lg text-[#101828]">Telephone</h3>
+                                <p class="text-zinc-600 font-semibold">+00000000000000</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="md:col-span-2" data-aos="fade-up">
+                        <a
+                            class="w-full flex md:items-center transition-all duration-500 gap-3 md:p-4 p-3 bg-zinc-100 rounded-2xl ">
+                            <div class="">
+                                <h3 class="Montserrat font-semibold text-lg text-[#101828]">Address</h3>
+                                <p class="text-zinc-600 font-semibold">Qatar</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <form data-aos="fade-up" class="lg:max-w-[55%] grid md:grid-cols-2 p-2 grid-cols-1 w-full gap-10"
+                id="contact-form">
+                <input type="hidden" name="access_key" value="keyyyyyyyyyyyyyyyyyyy">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <div class="flex items-center md:col-span-2 gap-4 border-b border-[#D0D5DD]">
+                    <input type="text" name="name" placeholder="Name*" required
+                        class="w-full  border-0 placeholder:text-[#475467] py-4" id="name">
+                </div>
+                <div class="flex items-center gap-4 border-b md:col-span-2 border-[#D0D5DD]">
+                    <input type="email" name="email" placeholder="Email*" required
+                        class="w-full  border-0 placeholder:text-[#475467] py-4" id="email">
+                </div>
+                <div class="flex items-center gap-4 border-b md:col-span-2 border-[#D0D5DD]">
+                    <input type="text" name="message" placeholder="Message*"
+                        class="w-full border-0 placeholder:text-[#475467] py-4" id="message">
+                </div>
+                <p class="text-[#475467] text-sm font-normal md:col-span-2">Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Voluptatum nihil voluptates est sint, minus quia ex voluptate officiis repellat
+                    fugiat.</p>
+                <div data-aos="fade-up" class="flex">
+                    <button type="submit"
+                        class="w-full text-nowrap md:w-auto inline-flex items-center justify-center py-3.5 px-12 cursor-pointer text-base font-medium text-center text-white rounded-full bg-[#1e5b5a] Montserrat shadow-xs hover:opacity-70 transition-all duration-500">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+
+            <!-- Notification Modal -->
+            <div id="success-popup"
+                class="hidden fixed fadeIn bottom-10 right-10 z-50 bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <p class="text-lg flex items-center justify-center gap-2 font-medium text-green-500"><i
+                            class="fa-solid text-green-500 fa-circle-check"></i>Submit Successfully</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="md:max-w-7xl lg:px-12 p-4 w-full mx-auto lg:mt-24 mt-12">
+        <h2 class="lg:text-5xl max-w-3xl mx-auto capitalize lg:leading-[3.5rem] text-center text-3xl font-semibold text-zinc-700"
+            data-aos="fade-up">Testimonial
+        </h2>
+        <p class="text-center text-zinc-600 mt-5 max-w-4xl mx-auto md:text-lg" data-aos="fade-up">Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Provident laboriosam, nesciunt cumque ducimus suscipit eveniet quibusdam
+            iure dolore. Neque, odio.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:mt-16 mt-8">
+            <div data-aos="fade-up"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="mb-6 flex items-center gap-2">
+                    <img src="/docs/assets/images/Untitled design.png"
+                        class="w-10 h-10 rounded-full border border-zinc-300 object-cover" alt="">
+                    <div class="">
+                        <h3 class="font-medium">Jhon Wala</h3>
+                        <p class="text-xs text-zinc-500">Doctor</p>
+                    </div>
+                </div>
+                <p class="text-zinc-600 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam saepe sunt
+                    harum, debitis, cumque deserunt ad officia dolorem eos illo beatae eum et nesciunt, necessitatibus
+                    quam asperiores assumenda quos consequuntur.</p>
+                <div class="flex items-center gap-1 ">
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="mb-6 flex items-center gap-2">
+                    <img src="/docs/assets/images/Untitled design.png"
+                        class="w-10 h-10 rounded-full border border-zinc-300 object-cover" alt="">
+                    <div class="">
+                        <h3 class="font-medium">Jhon Wala</h3>
+                        <p class="text-xs text-zinc-500">Doctor</p>
+                    </div>
+                </div>
+                <p class="text-zinc-600 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam saepe sunt
+                    harum, debitis, cumque deserunt ad officia dolorem eos illo beatae eum et nesciunt, necessitatibus
+                    quam asperiores assumenda quos consequuntur.</p>
+                <div class="flex items-center gap-1 ">
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="mb-6 flex items-center gap-2">
+                    <img src="/docs/assets/images/Untitled design.png"
+                        class="w-10 h-10 rounded-full border border-zinc-300 object-cover" alt="">
+                    <div class="">
+                        <h3 class="font-medium">Jhon Wala</h3>
+                        <p class="text-xs text-zinc-500">Doctor</p>
+                    </div>
+                </div>
+                <p class="text-zinc-600 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam saepe sunt
+                    harum, debitis, cumque deserunt ad officia dolorem eos illo beatae eum et nesciunt, necessitatibus
+                    quam asperiores assumenda quos consequuntur.</p>
+                <div class="flex items-center gap-1 ">
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg "></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="bg-zinc-100 md:py-20 py-10 md:mt-16 mt-10">
+        <section class="w-full p-5 max-w-4xl mx-auto ">
+            <h2 data-aos="fade-up" class="text-zinc-800 font-semibold md:text-5xl text-center text-3xl">Frequently Asked
+                Questions</h2>
+
+            <p data-aos="fade-up" class="text-zinc-600 mt-2 md:mt-5 text-center md:mt-4 md:text-lg">
+                A VPN, or virtual private network, is a tool that protects your online activity from spying eyes. It
+                encrypts your data and routes it through a secure tunnel.
+            </p>
+
+            <div class="md:mt-14 mt-10">
+                <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6" data-aos="fade-up">
+                    <button onclick="toggleAccordion(1)"
+                        class="w-full cursor-pointer flex justify-between items-center">
+                        <p class="text-lg text-start font-medium">What types of VPNs are there?</p>
+                        <i id="icon-1"
+                            class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-600">
+                            There are several types of VPNs, including remote access VPNs, site-to-site VPNs, and
+                            client-based VPNs. Each serves a different purpose depending on the needs of the user,
+                            whether it's individual security or connecting multiple networks.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6 mt-5" data-aos="fade-up">
+                    <button onclick="toggleAccordion(2)"
+                        class="w-full cursor-pointer flex justify-between items-center">
+                        <p class="text-lg text-start font-medium">Why do I need a VPN?</p>
+                        <i id="icon-2"
+                            class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-600">
+                            A VPN helps you protect your privacy and security while online by encrypting your internet
+                            connection, hiding your IP address, and providing access to restricted content.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6 mt-5" data-aos="fade-up">
+                    <button onclick="toggleAccordion(3)"
+                        class="w-full cursor-pointer flex justify-between items-center">
+                        <p class="text-lg text-start font-medium">Is VPN legal?</p>
+                        <i id="icon-3"
+                            class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-600">
+                            In most countries, VPNs are legal to use. However, some countries restrict VPN usage,
+                            especially for bypassing government censorship or engaging in illegal activities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6 mt-5" data-aos="fade-up">
+                    <button onclick="toggleAccordion(4)"
+                        class="w-full cursor-pointer flex justify-between items-center">
+                        <p class="text-lg text-start font-medium">How does a VPN improve security?</p>
+                        <i id="icon-4"
+                            class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-600">
+                            A VPN improves security by encrypting your internet connection, masking your IP address, and
+                            preventing third parties from tracking your online activity or intercepting your data.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6 mt-5" data-aos="fade-up">
+                    <button onclick="toggleAccordion(5)"
+                        class="w-full cursor-pointer flex justify-between items-center">
+                        <p class="text-lg text-start font-medium">Can VPNs be used on mobile devices?</p>
+                        <i id="icon-5"
+                            class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                    </button>
+                    <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="pt-3 text-zinc-600">
+                            Yes, VPNs can be used on mobile devices such as smartphones and tablets. Most VPN providers
+                            offer apps for both Android and iOS devices for easy installation and use.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="bg-[#00746e] md:pt-20 pt-10 p-5">
+
+        <div class="md:max-w-[80%] w-full mx-auto">
+
+            <div class="flex md:flex-row flex-col sm:items-center md:gap-24 gap-7 justify-between">
+                <div class="" data-aos="fade-up">
+                    <a href="/index.html">
+                        <img src="/docs/assets/images/logo.png" class="md:h-24 h-20" alt="">
+                    </a>
+                    <p class="text-[#F3F3F5] md:w-[347px] mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Aliquid, fuga.
+                    </p>
+                </div>
+
+                <ul data-aos="fade-up" data-aos-delay="100"
+                    class="flex sm:items-center text-[#EAECF0] md:gap-10 gap-5 sm:flex-row flex-wrap flex-col">
+                    <li><a href="#about" class="transition-all duration-500 hover:opacity-60">About Us</a></li>
+                    <li><a href="#contact" class="transition-all duration-500 hover:opacity-60">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <div class="w-full h-[1px] my-10 bg-[#C6C8D0]"></div>
+            <div class="flex items-center justify-between gap-5 md:flex-row flex-col">
+                <p class="text-[#F3F3F5]">© 2025 Tunnel Fun. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#">
+                        <i
+                            class="fa-brands text-2xl text-zinc-300 transition-all duration-500 hover:opacity-70 fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i
+                            class="fa-brands text-2xl text-zinc-300 transition-all duration-500 hover:opacity-70 fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i
+                            class="fa-brands text-2xl text-zinc-300 transition-all duration-500 hover:opacity-70 fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                        <i
+                            class="fa-brands text-2xl text-zinc-300 transition-all duration-500 hover:opacity-70 fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./docs/javascript/global.js"></script>
+    <script src="./docs/javascript/navbar.js"></script>
+    <script src="./docs/javascript/footer.js"></script>
+</body>
+
+</html>

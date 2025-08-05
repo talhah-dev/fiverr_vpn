@@ -1,0 +1,8 @@
+# This is the robots.txt file for your simple, static website
+
+# Allow all bots to crawl all pages of the website
+User-agent: *
+Disallow: 
+
+# the location of your sitemap
+Sitemap: https://www.tunnelfun.com/sitemap.xml
